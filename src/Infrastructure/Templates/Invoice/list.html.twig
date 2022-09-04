@@ -1,0 +1,33 @@
+{% extends 'Layout/components/index.html.twig' %}
+{% block content %}
+        <h4>Liste des factures</h4>
+        <a href="{{path('create_invoice')}}" class="btn btn-primary mb-2 mt-2">Créer une nouvelle facture</a>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">N°</th>
+                <th scope="col">Désignation</th>
+                <th scope="col">Prix HT</th>
+                <th scope="col">TVA</th>
+                <th scope="col">Prix TTC</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for invoice in invoices %}
+                    <tr>
+                        <th scope="row">{{invoice.id}}</th>
+                        <td>{{invoice.designation}}</td>
+                        <td>{{invoice.priceHt|number_format(2)}}</td>
+                        <td>20%</td>
+                        <td>{{invoice.priceTtc|number_format(2)}}</td>
+                        <td>
+                            <a href="{{path('update_invoice',{'id':invoice.id})}}" class="btn btn-warning">Modifier</a>
+                            <a href="#" class="btn btn-danger">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+{% endblock %}

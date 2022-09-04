@@ -1,0 +1,23 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_login:
+     path: /login
+     controller: App\Infrastructure\Symfony\Controller\Security\SecurityController::login
+
+app_logout:
+     path: /logout
+     controller: App\Infrastructure\Symfony\Controller\Security\SecurityController::logout
+
+invoice_list:
+     path: /invoice
+     controller: App\Infrastructure\Symfony\Controller\Invoice\getInvoiceController::getInvoices
+
+create_invoice:
+     path: /invoice/create
+     controller: App\Infrastructure\Symfony\Controller\Invoice\createInvoiceController::create
+
+update_invoice:
+     path: /invoice/update/{id}
+     controller: App\Infrastructure\Symfony\Controller\Invoice\updateInvoiceController::update

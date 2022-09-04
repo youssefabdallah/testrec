@@ -1,0 +1,16 @@
+{{form_start(form)}}
+    <div class="row">
+        <div class="col">
+            {{ form_row(form.designation) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.description) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.price_ht) }}
+        </div>
+        <div class="col">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+{{form_end(form)}}

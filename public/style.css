@@ -1,0 +1,45 @@
+.headertop-1 .container{
+    position: relative;
+    height: 40px;
+    width: 1200px;
+}
+.headertop-1 #logout{
+    position: absolute;
+    right: 55px;
+}
+.logo{
+    height: 65px;
+}
+.headertop-2 {
+    margin-top: 2rem;
+}
+.headertop-2 .block-infos{
+    display: flex;
+    justify-content: space-between;
+}
+.headertop-2 .date{
+    background: #f2f2f2;
+    padding: 0px 25px;
+}
+.headertop-2 .date p{
+    margin-bottom: 0;
+}
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1200px !important;
+    }
+}
+.navbar-nav .nav-link {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+#navbarNavAltMarkup{
+    justify-content: center !important;
+}
+#navbar{
+    border-bottom: solid 2px #343a40;
+}
+.menu-content .list-group,
+.contact-content .list-group{
+    list-style: none;
+}

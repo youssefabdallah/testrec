@@ -1,0 +1,25 @@
+{% extends 'Layout/base.html.twig' %}
+
+{% block body %} 
+    <header id="header" class="mb-3">
+        <div class="container">
+            {% include 'Layout/components/TopBar.html.twig' %}
+            {% include 'Layout/components/Navbar.html.twig'%}
+        </div> 
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-lg-2 block-menu">
+                {% include 'Layout/components/menu.html.twig' %}
+            </div>
+            <div class="col-md-8 col-lg-8 block-content">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-2 col-lg-2 block-contact">
+                {% include 'Layout/components/Contact.html.twig' %}
+            </div>
+        </div>
+        
+    </div>
+    
+{% endblock %}
